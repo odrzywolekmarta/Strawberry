@@ -15,22 +15,32 @@ struct ContentView: View {
                 .resizable()
                 .ignoresSafeArea()
 
-            VStack {
-                Image("bowl")
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(40)
-                    .shadow(radius: 12)
-                    .padding()
+            ScrollView(showsIndicators: false) {
                 
                 
-                FactsTabView()
-                
-                
-                Spacer()
-                
-            }
-        }
+                VStack(spacing: 0) {
+                    Text(Constants.strawberries)
+                        .font(.custom(Constants.customFont, size: 40))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 0)
+                        .shadow(radius: 12)
+                    Image("bowl")
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(40)
+                        .shadow(radius: 12)
+                        .padding()
+                    
+                    NutritionView()
+                        .padding()
+                    FactsTabView()
+                    
+                    
+                    Spacer()
+                    
+                }
+            } // vstack
+        } // zstack
     }
 }
 

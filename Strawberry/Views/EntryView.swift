@@ -30,13 +30,16 @@ struct EntryView: View {
                         .foregroundColor(.white)
                         .shadow(radius: 12)
                     Text(Constants.description1)
+                        .font(.system(size: 20))
                         .fontWeight(.light)
                         .multilineTextAlignment(.center)
                         .padding()
                         .background(
-                            Color.white
+                            Color("CustomPink")
                                 .opacity(0.4)
                                 .cornerRadius(30)).padding()
+                        .foregroundColor(.white)
+                        .shadow(radius: 12)
                     StartButtonView(showEntry: $showEntry)
                     Spacer()
                 } // vstack

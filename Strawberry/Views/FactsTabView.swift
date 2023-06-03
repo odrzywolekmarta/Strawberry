@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct FactsTabView: View {
-    let factsData = [Constants.description2, Constants.description3, Constants.description4, Constants.description5, Constants.description6]
 
     var body: some View {
         VStack(spacing: 0) {
@@ -16,6 +15,7 @@ struct FactsTabView: View {
                 .font(.custom(Constants.customFont, size: 40))
                 .foregroundColor(.white)
                 .padding(.bottom, 0)
+                .shadow(radius: 12)
             
             TabView {
                 ForEach(factsData, id: \.self) { fact in
@@ -38,7 +38,7 @@ struct FactsTabView: View {
                 } // foreach
             } // tabview
             .tabViewStyle(.page(indexDisplayMode: .automatic))
-            .frame(height: 290)
+            .frame(height: 250)
             .padding(.top, 0)
         }
             

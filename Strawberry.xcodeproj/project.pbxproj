@@ -10,6 +10,8 @@
 		2D44972C2A2A8F4B002ABD7D /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D44972B2A2A8F4B002ABD7D /* StartButtonView.swift */; };
 		2D4497302A2B7F86002ABD7D /* FactsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D44972F2A2B7F86002ABD7D /* FactsTabView.swift */; };
 		2D4497322A2B870A002ABD7D /* FactsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4497312A2B870A002ABD7D /* FactsData.swift */; };
+		2D4497342A2B9D3C002ABD7D /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4497332A2B9D3C002ABD7D /* NutritionView.swift */; };
+		2D4497372A2BA0D7002ABD7D /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 2D4497362A2BA0D7002ABD7D /* OrderedCollections */; };
 		2DFAC5EE2A2A5FFD00CF6199 /* StrawberryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAC5ED2A2A5FFD00CF6199 /* StrawberryApp.swift */; };
 		2DFAC5F02A2A5FFD00CF6199 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAC5EF2A2A5FFD00CF6199 /* ContentView.swift */; };
 		2DFAC5F22A2A5FFE00CF6199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFAC5F12A2A5FFE00CF6199 /* Assets.xcassets */; };
@@ -23,6 +25,7 @@
 		2D44972B2A2A8F4B002ABD7D /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		2D44972F2A2B7F86002ABD7D /* FactsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTabView.swift; sourceTree = "<group>"; };
 		2D4497312A2B870A002ABD7D /* FactsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsData.swift; sourceTree = "<group>"; };
+		2D4497332A2B9D3C002ABD7D /* NutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
 		2DFAC5EA2A2A5FFD00CF6199 /* Strawberry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strawberry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFAC5ED2A2A5FFD00CF6199 /* StrawberryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrawberryApp.swift; sourceTree = "<group>"; };
 		2DFAC5EF2A2A5FFD00CF6199 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D4497372A2BA0D7002ABD7D /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,7 @@
 				2D44972B2A2A8F4B002ABD7D /* StartButtonView.swift */,
 				2DFAC5EF2A2A5FFD00CF6199 /* ContentView.swift */,
 				2D44972F2A2B7F86002ABD7D /* FactsTabView.swift */,
+				2D4497332A2B9D3C002ABD7D /* NutritionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +140,9 @@
 			dependencies = (
 			);
 			name = Strawberry;
+			packageProductDependencies = (
+				2D4497362A2BA0D7002ABD7D /* OrderedCollections */,
+			);
 			productName = Strawberry;
 			productReference = 2DFAC5EA2A2A5FFD00CF6199 /* Strawberry.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +171,9 @@
 				Base,
 			);
 			mainGroup = 2DFAC5E12A2A5FFD00CF6199;
+			packageReferences = (
+				2D4497352A2BA0D7002ABD7D /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 2DFAC5EB2A2A5FFD00CF6199 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +206,7 @@
 				2DFAC5EE2A2A5FFD00CF6199 /* StrawberryApp.swift in Sources */,
 				2D4497302A2B7F86002ABD7D /* FactsTabView.swift in Sources */,
 				2DFAC5FE2A2A77C900CF6199 /* EntryView.swift in Sources */,
+				2D4497342A2B9D3C002ABD7D /* NutritionView.swift in Sources */,
 				2D44972C2A2A8F4B002ABD7D /* StartButtonView.swift in Sources */,
 				2DFAC6042A2A7E0A00CF6199 /* Constants.swift in Sources */,
 			);
@@ -399,6 +411,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D4497352A2BA0D7002ABD7D /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D4497362A2BA0D7002ABD7D /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D4497352A2BA0D7002ABD7D /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2DFAC5E22A2A5FFD00CF6199 /* Project object */;
 }
