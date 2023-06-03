@@ -37,8 +37,9 @@ struct StrawberryHeaderView: View {
                             .clipped()
                             .offset(y: -geometry.frame(in: .global).minY)
                     }
-                }
-            }
+                } // vstack
+            } // geometry
+            
             HStack {
                 ZStack {
                     Rectangle()
