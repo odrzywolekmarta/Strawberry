@@ -10,11 +10,7 @@ import SwiftUI
 struct NutritionView: View {
     var body: some View {
         VStack(spacing: 0) {
-            Text("Nutrition")
-                .font(.custom(Constants.customFont, size: 40))
-                .foregroundColor(.white)
-                .padding(.bottom, 0)
-                .shadow(radius: 12)
+           TitleView(title: "Nutrition")
 
             HStack {
                 VStack(alignment: .trailing, spacing: 0) {
@@ -42,7 +38,7 @@ struct NutritionView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30)
-                        .opacity(0.8)
+                        .opacity(0.4)
                     
                   HStack {
                     Divider()
@@ -64,6 +60,7 @@ struct NutritionView: View {
                 } // vstack
             } // hstack
         .font(.system(size: 20))
+        .shadow(radius: 12)
         .frame(height: 300)
         }
     }
@@ -72,7 +69,7 @@ struct NutritionView: View {
 struct NutritionView_Previews: PreviewProvider {
     static var previews: some View {
         NutritionView()
-            .background(.blue)
+            .background(Color("CustomPink"))
             .previewLayout(.sizeThatFits)
     }
 }

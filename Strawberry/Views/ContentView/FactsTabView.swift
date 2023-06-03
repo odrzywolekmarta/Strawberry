@@ -11,30 +11,28 @@ struct FactsTabView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            Text("Facts")
-                .font(.custom(Constants.customFont, size: 40))
-                .foregroundColor(.white)
-                .padding(.bottom, 0)
-                .shadow(radius: 12)
+            TitleView(title: "Facts")
             
             TabView {
                 ForEach(factsData, id: \.self) { fact in
                     Group {
                         Text(Constants.strawberries)
-                            .font(.custom(Constants.customFont, size: 30)) +
+                            .font(.custom(Constants.customFont, size: 25))
+                            .foregroundColor(.white)
++
                         Text(fact)
                             .font(.system(size: 20))
+                            .foregroundColor(Color.black.opacity(0.8))
                     } // group
-                    .shadow(radius: 6)
+                    .shadow(radius: 12)
                     .padding()
                     .background(
-                        Color("CustomPink")
-                            .opacity(0.5)
+                        Color.white
+                            .opacity(0.3)
                             .cornerRadius(20)
                             .frame(height: 220))
                     .padding()
-                    .foregroundColor(.white)
-    //                .shadow(radius: 6)
+//                    .shadow(radius: 6)
                 } // foreach
             } // tabview
             .tabViewStyle(.page(indexDisplayMode: .automatic))

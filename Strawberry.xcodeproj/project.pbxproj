@@ -12,6 +12,9 @@
 		2D4497322A2B870A002ABD7D /* FactsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4497312A2B870A002ABD7D /* FactsData.swift */; };
 		2D4497342A2B9D3C002ABD7D /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4497332A2B9D3C002ABD7D /* NutritionView.swift */; };
 		2D4497372A2BA0D7002ABD7D /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 2D4497362A2BA0D7002ABD7D /* OrderedCollections */; };
+		2D4497392A2BA6FF002ABD7D /* StrawberryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4497382A2BA6FF002ABD7D /* StrawberryHeaderView.swift */; };
+		2D44973F2A2BBFA3002ABD7D /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D44973E2A2BBFA3002ABD7D /* TitleView.swift */; };
+		2D4497412A2BC017002ABD7D /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4497402A2BC017002ABD7D /* RecipesView.swift */; };
 		2DFAC5EE2A2A5FFD00CF6199 /* StrawberryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAC5ED2A2A5FFD00CF6199 /* StrawberryApp.swift */; };
 		2DFAC5F02A2A5FFD00CF6199 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAC5EF2A2A5FFD00CF6199 /* ContentView.swift */; };
 		2DFAC5F22A2A5FFE00CF6199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFAC5F12A2A5FFE00CF6199 /* Assets.xcassets */; };
@@ -26,6 +29,9 @@
 		2D44972F2A2B7F86002ABD7D /* FactsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsTabView.swift; sourceTree = "<group>"; };
 		2D4497312A2B870A002ABD7D /* FactsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsData.swift; sourceTree = "<group>"; };
 		2D4497332A2B9D3C002ABD7D /* NutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
+		2D4497382A2BA6FF002ABD7D /* StrawberryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrawberryHeaderView.swift; sourceTree = "<group>"; };
+		2D44973E2A2BBFA3002ABD7D /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		2D4497402A2BC017002ABD7D /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		2DFAC5EA2A2A5FFD00CF6199 /* Strawberry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strawberry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFAC5ED2A2A5FFD00CF6199 /* StrawberryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrawberryApp.swift; sourceTree = "<group>"; };
 		2DFAC5EF2A2A5FFD00CF6199 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +55,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D44973A2A2BA714002ABD7D /* EntryView */ = {
+			isa = PBXGroup;
+			children = (
+				2DFAC5FD2A2A77C900CF6199 /* EntryView.swift */,
+				2D44972B2A2A8F4B002ABD7D /* StartButtonView.swift */,
+			);
+			path = EntryView;
+			sourceTree = "<group>";
+		};
+		2D44973B2A2BA71E002ABD7D /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				2DFAC5EF2A2A5FFD00CF6199 /* ContentView.swift */,
+				2D44973E2A2BBFA3002ABD7D /* TitleView.swift */,
+				2D4497382A2BA6FF002ABD7D /* StrawberryHeaderView.swift */,
+				2D44972F2A2B7F86002ABD7D /* FactsTabView.swift */,
+				2D4497332A2B9D3C002ABD7D /* NutritionView.swift */,
+				2D4497402A2BC017002ABD7D /* RecipesView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
 		2DFAC5E12A2A5FFD00CF6199 = {
 			isa = PBXGroup;
 			children = (
@@ -91,11 +119,8 @@
 		2DFAC5FB2A2A60A200CF6199 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2DFAC5FD2A2A77C900CF6199 /* EntryView.swift */,
-				2D44972B2A2A8F4B002ABD7D /* StartButtonView.swift */,
-				2DFAC5EF2A2A5FFD00CF6199 /* ContentView.swift */,
-				2D44972F2A2B7F86002ABD7D /* FactsTabView.swift */,
-				2D4497332A2B9D3C002ABD7D /* NutritionView.swift */,
+				2D44973A2A2BA714002ABD7D /* EntryView */,
+				2D44973B2A2BA71E002ABD7D /* ContentView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +234,9 @@
 				2D4497342A2B9D3C002ABD7D /* NutritionView.swift in Sources */,
 				2D44972C2A2A8F4B002ABD7D /* StartButtonView.swift in Sources */,
 				2DFAC6042A2A7E0A00CF6199 /* Constants.swift in Sources */,
+				2D4497392A2BA6FF002ABD7D /* StrawberryHeaderView.swift in Sources */,
+				2D4497412A2BC017002ABD7D /* RecipesView.swift in Sources */,
+				2D44973F2A2BBFA3002ABD7D /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
