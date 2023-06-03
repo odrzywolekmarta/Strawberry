@@ -49,7 +49,7 @@ struct EntryView: View {
             } // zstack
             .transition(.move(edge: .bottom))
         } else {
-            ContentView()
+            StrawberryTabView()
         }
         
     }

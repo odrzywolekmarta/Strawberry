@@ -39,11 +39,6 @@ struct StrawberryHeaderView: View {
                     }
                 }
             }
-//            .frame(height: 400)
-//            Image("bowl")
-//                .resizable()
-//                .aspectRatio(contentMode: .fill)
-//                .shadow(radius: 12)
             HStack {
                 ZStack {
                     Rectangle()

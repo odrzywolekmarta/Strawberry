@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RecipeDetailsView: View {
+    @Binding var showDetails: Bool
     var recipe: Recipe
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -17,7 +18,7 @@ struct RecipeDetailsView: View {
                         .resizable()
                         .scaledToFit()
                         .shadow(radius: 6)
-                    
+                                            
                     Text(recipe.title)
                         .font(.custom(Constants.customFont, size: 35))
                         .multilineTextAlignment(.center)
@@ -31,22 +32,21 @@ struct RecipeDetailsView: View {
                     IngredientsView(recipe: recipe)
                     
                     RecipeInstructionsView(recipe: recipe)
-                    
-                    
-                } // vstack
+                }
                 .background(.white)
                 Text("Enjoy!")
                     .font(.custom(Constants.customFont, size: 25))
                     .foregroundColor(Color("CustomPink"))
                     .padding(.bottom, 20)
-            }
+            } // vstack
         } // scrollview
         .ignoresSafeArea()
+       
     }
 }
 
 struct RecipeDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeDetailsView(recipe: recipesData[0])
+        RecipeDetailsView(showDetails: .constant(true), recipe: recipesData[0])
     }
 }

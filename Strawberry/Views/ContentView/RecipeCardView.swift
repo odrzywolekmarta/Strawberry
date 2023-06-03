@@ -44,7 +44,7 @@ struct RecipeCardView: View {
             showDetails = true
         }
         .sheet(isPresented: $showDetails) {
-            RecipeDetailsView(recipe: recipe)
+            RecipeDetailsView(showDetails: $showDetails, recipe: recipe)
         }
     }
 }

@@ -8,19 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-//    init() {
-//        UIScrollView.appearance().bounces = false
-//    }
-    
+
     var body: some View {
         ZStack {
             Image("background")
                 .resizable()
-                .ignoresSafeArea()
-            //            Color("CustomPink")
-            //                .ignoresSafeArea()
-            
+                .edgesIgnoringSafeArea(.top)
+           
             ScrollView(showsIndicators: false) {
                 StrawberryHeaderView()
                 
@@ -35,15 +29,22 @@ struct ContentView: View {
                     
                     ExternalWeblinkView()
                     
-                    Text("Everything you ever wanted to know about strawberries,")
-                        .font(.custom(Constants.customFont, size: 25))
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.white)
-                        .shadow(radius: 12)
-                        .padding()
+                    VStack(spacing: 0) {
+                        Text("Everything you ever wanted to know about strawberries.")
+                            .font(.custom(Constants.customFont, size: 25))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                            .shadow(radius: 12)
+                        Text("You're welcome.")
+                            .font(.system(size: 20))
+                            .italic()
+                            .foregroundColor(.black.opacity(0.5))
+                    }
+                    .padding()
+                    
                 } // vstack
             } // scrollview
-            .ignoresSafeArea()
+//            .ignoresSafeArea(.top)
         } // zstack
     }
 }
