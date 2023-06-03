@@ -9,10 +9,13 @@ import SwiftUI
 
 struct StartButtonView: View {
     @Binding var showEntry: Bool
+    private let feedback = UIImpactFeedbackGenerator(style: .heavy)
+
     var body: some View {
         Button {
             withAnimation {
                 showEntry = false
+                feedback.impactOccurred()
             }
         } label: {
             HStack {
