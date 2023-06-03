@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D44972C2A2A8F4B002ABD7D /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D44972B2A2A8F4B002ABD7D /* StartButtonView.swift */; };
 		2DFAC5EE2A2A5FFD00CF6199 /* StrawberryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAC5ED2A2A5FFD00CF6199 /* StrawberryApp.swift */; };
 		2DFAC5F02A2A5FFD00CF6199 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAC5EF2A2A5FFD00CF6199 /* ContentView.swift */; };
 		2DFAC5F22A2A5FFE00CF6199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFAC5F12A2A5FFE00CF6199 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D44972B2A2A8F4B002ABD7D /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		2DFAC5EA2A2A5FFD00CF6199 /* Strawberry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strawberry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFAC5ED2A2A5FFD00CF6199 /* StrawberryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrawberryApp.swift; sourceTree = "<group>"; };
 		2DFAC5EF2A2A5FFD00CF6199 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,7 +66,6 @@
 				2DFAC5FB2A2A60A200CF6199 /* Views */,
 				2DFAC5FC2A2A60B000CF6199 /* Models */,
 				2DFAC5FF2A2A7D2D00CF6199 /* Fonts */,
-				2DFAC5EF2A2A5FFD00CF6199 /* ContentView.swift */,
 				2DFAC5F12A2A5FFE00CF6199 /* Assets.xcassets */,
 				2DFAC5F32A2A5FFE00CF6199 /* Preview Content */,
 			);
@@ -83,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				2DFAC5FD2A2A77C900CF6199 /* EntryView.swift */,
+				2D44972B2A2A8F4B002ABD7D /* StartButtonView.swift */,
+				2DFAC5EF2A2A5FFD00CF6199 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				2DFAC5F02A2A5FFD00CF6199 /* ContentView.swift in Sources */,
 				2DFAC5EE2A2A5FFD00CF6199 /* StrawberryApp.swift in Sources */,
 				2DFAC5FE2A2A77C900CF6199 /* EntryView.swift in Sources */,
+				2D44972C2A2A8F4B002ABD7D /* StartButtonView.swift in Sources */,
 				2DFAC6042A2A7E0A00CF6199 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

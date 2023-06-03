@@ -11,7 +11,7 @@ import SwiftUI
 struct StrawberryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EntryView()
         }
     }
 }
