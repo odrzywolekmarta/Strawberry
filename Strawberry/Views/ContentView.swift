@@ -8,9 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(<#T##name: String##String#>)
+        ZStack {
+            Image("background")
+                .resizable()
+                .ignoresSafeArea()
+
+            VStack {
+                Image("bowl")
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(40)
+                    .shadow(radius: 12)
+                    .padding()
+                
+                
+                FactsTabView()
+                
+                
+                Spacer()
+                
+            }
+        }
     }
 }
 

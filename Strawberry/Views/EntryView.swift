@@ -29,7 +29,7 @@ struct EntryView: View {
                         .font(.custom(Constants.customFont, size: 50))
                         .foregroundColor(.white)
                         .shadow(radius: 12)
-                    Text(Constants.description)
+                    Text(Constants.description1)
                         .fontWeight(.light)
                         .multilineTextAlignment(.center)
                         .padding()
