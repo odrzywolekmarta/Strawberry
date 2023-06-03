@@ -11,17 +11,39 @@ struct StrawberryHeaderView: View {
     @State private var showHeadline: Bool = false
     
     var slideInAnimation: Animation {
-      Animation.spring(response: 1.5, dampingFraction: 0.5, blendDuration: 0.5)
-        .speed(1)
-        .delay(0.25)
+        Animation.spring(response: 1.5, dampingFraction: 0.5, blendDuration: 0.5)
+            .speed(1)
+            .delay(0.25)
     }
     
     var body: some View {
         ZStack {
-            Image("bowl")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .shadow(radius: 12)
+            GeometryReader { geometry in
+                VStack {
+                    if geometry.frame(in: .global).minY <= 0 {
+                        Image("bowl")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: geometry.size.width, height: geometry.size.height)
+                            .shadow(radius: 12)
+                            .offset(y: geometry.frame(in: .global).minY/9)
+                            .clipped()
+                    } else {
+                        Image("bowl")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: geometry.size.width, height: geometry.size.height + geometry.frame(in: .global).minY)
+                            .shadow(radius: 12)
+                            .clipped()
+                            .offset(y: -geometry.frame(in: .global).minY)
+                    }
+                }
+            }
+//            .frame(height: 400)
+//            Image("bowl")
+//                .resizable()
+//                .aspectRatio(contentMode: .fill)
+//                .shadow(radius: 12)
             HStack {
                 ZStack {
                     Rectangle()
@@ -36,7 +58,7 @@ struct StrawberryHeaderView: View {
                             .foregroundColor(.white)
                             .shadow(radius: 12)
                     } // vstack
-
+                    
                 } // zstack
                 .animation(slideInAnimation, value: showHeadline)
                 .offset(x: showHeadline ? 0 : 400, y: 70)
