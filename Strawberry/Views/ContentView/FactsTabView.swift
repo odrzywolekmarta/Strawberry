@@ -36,7 +36,7 @@ struct FactsTabView: View {
                 } // foreach
             } // tabview
             .tabViewStyle(.page(indexDisplayMode: .automatic))
-            .frame(height: 250)
+            .frame(height: 240)
             .padding(.top, 0)
         }
             

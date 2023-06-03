@@ -35,8 +35,8 @@ struct EntryView: View {
                         .multilineTextAlignment(.center)
                         .padding()
                         .background(
-                            Color("CustomPink")
-                                .opacity(0.4)
+                            Color.white
+                                .opacity(0.3)
                                 .cornerRadius(30)).padding()
                         .foregroundColor(.white)
                         .shadow(radius: 12)

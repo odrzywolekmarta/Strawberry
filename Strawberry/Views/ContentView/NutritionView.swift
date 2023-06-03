@@ -18,8 +18,10 @@ struct NutritionView: View {
                         VStack(alignment: .trailing, spacing: 4) {
                             Text(key)
                                 .opacity(0.8)
+                                .padding(.trailing, 5)
                             Text(nutritionData1[key] ?? "")
                                 .opacity(0.8)
+                                .padding(.trailing, 5)
                             Divider()
                                 .frame(height: 2)
                                 .overlay(.black.opacity(0.1))
@@ -51,7 +53,9 @@ struct NutritionView: View {
                     ForEach(Array(nutritionData2.keys), id: \.self) { key in
                         VStack(alignment: .leading, spacing: 4) {
                             Text(key)
+                                .padding(.leading, 5)
                             Text(nutritionData2[key] ?? "")
+                                .padding(.leading, 5)
                             Divider()
                                 .frame(height: 2)
                                 .overlay(.black.opacity(0.1))
@@ -59,9 +63,9 @@ struct NutritionView: View {
                     } // foreach
                 } // vstack
             } // hstack
-        .font(.system(size: 20))
+        .font(.system(size: 18))
         .shadow(radius: 12)
-        .frame(height: 300)
+        .frame(height: 280)
         }
     }
 }

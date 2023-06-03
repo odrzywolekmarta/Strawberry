@@ -11,32 +11,37 @@ struct RecipeDetailsView: View {
     var recipe: Recipe
     var body: some View {
         ScrollView {
-            VStack(alignment: .center, spacing: 20) {
-                Image(recipe.image)
-                    .resizable()
-                    .scaledToFit()
-                    .shadow(radius: 6)
-                
-                Text(recipe.title)
-                    .font(.custom(Constants.customFont, size: 35))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color("CustomPink"))
-                    .padding([.leading, .trailing])
-                
-                RatingView(recipe: recipe)
-                
-                RecipeInfoView(recipe: recipe)
-                
-                IngredientsView(recipe: recipe)
-                
-                RecipeInstructionsView(recipe: recipe)
-                
+            VStack(spacing: 0) {
+                VStack(alignment: .center, spacing: 15) {
+                    Image(recipe.image)
+                        .resizable()
+                        .scaledToFit()
+                        .shadow(radius: 6)
+                    
+                    Text(recipe.title)
+                        .font(.custom(Constants.customFont, size: 35))
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color("CustomPink"))
+                        .padding([.leading, .trailing])
+                    
+                    RatingView(recipe: recipe)
+                    
+                    RecipeInfoView(recipe: recipe)
+                    
+                    IngredientsView(recipe: recipe)
+                    
+                    RecipeInstructionsView(recipe: recipe)
+                    
+                    
+                } // vstack
+                .background(.white)
                 Text("Enjoy!")
                     .font(.custom(Constants.customFont, size: 25))
                     .foregroundColor(Color("CustomPink"))
-            } // vstack
-            .background(.white)
-        }
+                    .padding(.bottom, 20)
+            }
+        } // scrollview
+        .ignoresSafeArea()
     }
 }
 

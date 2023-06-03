@@ -32,6 +32,8 @@ struct ContentView: View {
                     
                     RecipesView()
                         .padding()
+                    
+                    ExternalWeblinkView()
                 } // vstack
             } // scrollview
             .ignoresSafeArea()
