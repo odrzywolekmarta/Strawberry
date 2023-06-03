@@ -10,24 +10,27 @@ import SwiftUI
 struct ExternalWeblinkView: View {
     
     var body: some View {
-        HStack {
-            Group {
-                Image(systemName: "globe")
-                Text("Wikipedia")
-            } // group
-            Spacer()
-            Link(destination: URL(string: "https://en.wikipedia.org/wiki/Strawberry")!) {
+        VStack(spacing: 0) {
+            TitleView(title: "Learn more")
+            HStack {
                 Group {
-                    Image(systemName: "arrow.up.right.square")
-                    Text("Strawberries")
+                    Image(systemName: "globe")
+                    Text("Wikipedia")
                 } // group
-                .tint(.black)
-            } // link
-        } // hstack
+                Spacer()
+                Link(destination: URL(string: "https://en.wikipedia.org/wiki/Strawberry")!) {
+                    Group {
+                        Image(systemName: "arrow.up.right.square")
+                        Text("Strawberries")
+                    } // group
+                    .tint(.black)
+                } // link
+            } // hstack
+            .padding()
+            .background(.white.opacity(0.3))
+            .cornerRadius(20)
         .padding()
-        .background(.white.opacity(0.3))
-        .cornerRadius(20)
-        .padding()
+        } // vstack
     }
 }
 

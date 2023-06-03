@@ -10,7 +10,7 @@ import SwiftUI
 struct RecipeDetailsView: View {
     var recipe: Recipe
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: 0) {
                 VStack(alignment: .center, spacing: 15) {
                     Image(recipe.image)

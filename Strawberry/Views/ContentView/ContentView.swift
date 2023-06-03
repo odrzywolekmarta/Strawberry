@@ -22,28 +22,6 @@ struct ContentView: View {
             //                .ignoresSafeArea()
             
             ScrollView(showsIndicators: false) {
-                
-//                GeometryReader { geometry in
-//                    VStack {
-//                        if geometry.frame(in: .global).minY <= 0 {
-//                            Image("bowl")
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fill)
-//                                .frame(width: geometry.size.width, height: geometry.size.height)
-//                                .shadow(radius: 12)
-//                                .offset(y: geometry.frame(in: .global).minY/9)
-//                                .clipped()
-//                        } else {
-//                            Image("bowl")
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fill)
-//                                .frame(width: geometry.size.width, height: geometry.size.height + geometry.frame(in: .global).minY)
-//                                .shadow(radius: 12)
-//                                .clipped()
-//                                .offset(y: -geometry.frame(in: .global).minY)
-//                        }
-//                    }
-//                }
                 StrawberryHeaderView()
                 
                 VStack(spacing: 0) {
@@ -56,6 +34,13 @@ struct ContentView: View {
                         .padding()
                     
                     ExternalWeblinkView()
+                    
+                    Text("Everything you ever wanted to know about strawberries,")
+                        .font(.custom(Constants.customFont, size: 25))
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.white)
+                        .shadow(radius: 12)
+                        .padding()
                 } // vstack
             } // scrollview
             .ignoresSafeArea()
