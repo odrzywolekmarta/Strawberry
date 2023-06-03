@@ -11,6 +11,8 @@ struct RecipesView: View {
     var body: some View {
         VStack {
             TitleView(title: "Recipes")
+            
+            
         } // vstack
     }
 }
