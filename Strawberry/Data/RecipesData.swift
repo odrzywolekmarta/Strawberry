@@ -95,7 +95,7 @@ Recipe(title: "Strawberry Shortcake Trifles",
         "500g strawberries, halved",
         "110g caster sugar",
         "160ml amaretto liqueur, dessert wine or apple juice",
-        "1/4 x 450g pkt Coles Make At Home Double Sponge Unfilled Cake",
+        "1/4 x 450g cake mix",
         "600g strawberry-flavoured yoghurt",
         "250g mascarpone",
         "halved strawberries, extra, to serve"

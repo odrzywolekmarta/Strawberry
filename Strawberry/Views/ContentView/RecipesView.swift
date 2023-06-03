@@ -9,10 +9,12 @@ import SwiftUI
 
 struct RecipesView: View {
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             TitleView(title: "Recipes")
             
-            
+            ForEach(recipesData, id: \.id) { recipe in
+                RecipeCardView(recipe: recipe)
+            }
         } // vstack
     }
 }
@@ -20,6 +22,5 @@ struct RecipesView: View {
 struct RecipesView_Previews: PreviewProvider {
     static var previews: some View {
         RecipesView()
-            .background(Color("CustomPink"))
     }
 }

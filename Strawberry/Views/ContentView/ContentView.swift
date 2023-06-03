@@ -15,11 +15,11 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-                        Image("background")
-                            .resizable()
-                            .ignoresSafeArea()
-//            Color("CustomPink")
-//                .ignoresSafeArea()
+            Image("background")
+                .resizable()
+                .ignoresSafeArea()
+            //            Color("CustomPink")
+            //                .ignoresSafeArea()
             
             ScrollView(showsIndicators: false) {
                 StrawberryHeaderView()
@@ -30,7 +30,8 @@ struct ContentView: View {
                     
                     FactsTabView()
                     
-                    Spacer()
+                    RecipesView()
+                        .padding()
                 } // vstack
             } // scrollview
             .ignoresSafeArea()
