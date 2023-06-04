@@ -17,11 +17,11 @@ struct FactsTabView: View {
                 ForEach(factsData, id: \.self) { fact in
                     Group {
                         Text(Constants.strawberries)
-                            .font(.custom(Constants.customFont, size: 25))
+                            .font(.custom(Constants.customFont, size: 24))
                             .foregroundColor(.white)
 +
                         Text(fact)
-                            .font(.system(size: 20))
+                            .font(.system(size: 19))
                             .foregroundColor(Color.black.opacity(0.8))
                     } // group
                     .shadow(radius: 12)
@@ -32,7 +32,6 @@ struct FactsTabView: View {
                             .cornerRadius(20)
                             .frame(height: 220))
                     .padding()
-//                    .shadow(radius: 6)
                 } // foreach
             } // tabview
             .tabViewStyle(.page(indexDisplayMode: .automatic))

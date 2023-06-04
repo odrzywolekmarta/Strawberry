@@ -32,10 +32,11 @@ struct RecipeCardView: View {
             
             VStack(alignment: .leading, spacing: 10) {
                 RatingView(recipe: recipe)
+                    .padding(.leading)
                 
                 RecipeInfoView(recipe: recipe)
+                    .padding([.bottom, .leading])
             } // vstack
-            .padding([.leading, .trailing, .bottom])
         } // vstack
         .background(.white)
         .cornerRadius(20)
