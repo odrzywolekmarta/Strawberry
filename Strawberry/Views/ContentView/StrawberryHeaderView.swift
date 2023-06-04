@@ -25,7 +25,6 @@ struct StrawberryHeaderView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: geometry.size.width, height: geometry.size.height)
-                            .shadow(radius: 12)
                             .offset(y: geometry.frame(in: .global).minY/9)
                             .clipped()
                     } else {
@@ -33,7 +32,6 @@ struct StrawberryHeaderView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: geometry.size.width, height: geometry.size.height + geometry.frame(in: .global).minY)
-                            .shadow(radius: 12)
                             .clipped()
                             .offset(y: -geometry.frame(in: .global).minY)
                     }

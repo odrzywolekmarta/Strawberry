@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct InfoView: View {
+    @State private var isAnimating: Bool = false
+    private let feedback = UIImpactFeedbackGenerator(style: .heavy)
+
     var body: some View {
         ZStack {
             Image("background")
                 .resizable()
                 .edgesIgnoringSafeArea(.top)
+            
+            if isAnimating {
+                AnimationView()
+//                    .transition(.opacity)
+                    .transition(AnyTransition.opacity.animation(.linear(duration: 0.5)))
+            }
             
             VStack {
                 TitleView(title: "Info")
@@ -40,14 +49,28 @@ struct InfoView: View {
                 } // vstack
                 .padding()
                 .cornerRadius(20)
-                Image("strawberrySymbol")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40)
+                Button {
+                    withAnimation(Animation.easeIn(duration: 2.0)) {
+//                    withAnimation(.easeOut(duration: 1.5)) {
+                        isAnimating.toggle()
+                    }
+                    feedback.impactOccurred()
+                } label: {
+                    VStack(spacing: 0) {
+                        Image("strawberrySymbol")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40)
+                        Text("Tap me.")
+                            .font(.system(size: 13))
+                            .italic()
+                            .foregroundColor(.black)
+                    } // vstack
                     .opacity(0.7)
+                } // button
+
                 Spacer()
             } // vstack
-
             .padding()
         } // zstack
     }

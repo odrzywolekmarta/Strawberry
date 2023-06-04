@@ -44,7 +44,7 @@ struct ContentView: View {
                     
                 } // vstack
             } // scrollview
-//            .ignoresSafeArea(.top)
+            .edgesIgnoringSafeArea(.top)
         } // zstack
     }
 }

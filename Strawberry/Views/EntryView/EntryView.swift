@@ -10,6 +10,7 @@ import SwiftUI
 struct EntryView: View {
     @State private var pulsateAnimation: Bool = true
     @State private var showEntry: Bool = true
+    
     var body: some View {
         if showEntry {
             ZStack {
@@ -37,7 +38,8 @@ struct EntryView: View {
                         .background(
                             Color.white
                                 .opacity(0.3)
-                                .cornerRadius(30)).padding()
+                                .cornerRadius(30))
+                        .padding()
                         .foregroundColor(.white)
                         .shadow(radius: 12)
                     StartButtonView(showEntry: $showEntry)

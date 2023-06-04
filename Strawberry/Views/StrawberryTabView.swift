@@ -15,16 +15,15 @@ struct StrawberryTabView: View {
                 .tabItem {
                     Label("Main", systemImage: "text.book.closed")
                 }
-                .toolbarBackground(.hidden, for: .tabBar)
+                .toolbarBackground(.hidden, for: .bottomBar)
             InfoView()
                 .tabItem {
                     Label("Info", systemImage: "info")
                 }
-                .toolbarBackground(.hidden, for: .tabBar)
+                .toolbarBackground(.hidden, for: .bottomBar)
 
         } // tabview
-        .tint(.pink
-        )
+        .tint(.pink)
 
     }
 }
