@@ -8,44 +8,67 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    @State private var isTop: Bool = false
+    
     var body: some View {
         ZStack {
             Image("background")
                 .resizable()
                 .edgesIgnoringSafeArea(.top)
-           
-            ScrollView(showsIndicators: false) {
-                StrawberryHeaderView()
-                
-                VStack(spacing: 0) {
-                    NutritionView()
-                        .padding()
-                    
-                    FactsTabView()
-                    
-                    RecipesView()
-                        .padding()
-                    
-                    ExternalWeblinkView()
+            
+            
+            ScrollViewReader { proxy in
+                ScrollView(showsIndicators: false) {
+                    StrawberryHeaderView()
+                        .id(1)
                     
                     VStack(spacing: 0) {
-                        Text("Everything you ever wanted to know about strawberries.")
-                            .font(.custom(Constants.customFont, size: 25))
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(.white)
-                            .shadow(radius: 12)
-                        Text("You're welcome.")
-                            .font(.system(size: 20))
-                            .italic()
-                            .foregroundColor(.black.opacity(0.5))
+                        NutritionView()
+                            .padding()
+                        
+                        FactsTabView()
+                        
+                        RecipesView()
+                            .padding()
+                        
+                        ExternalWeblinkView()
+                        
+                        VStack(spacing: 0) {
+                            Text("Everything you ever wanted to know about strawberries.")
+                                .font(.custom(Constants.customFont, size: 25))
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                                .shadow(radius: 12)
+                            Text("You're welcome.")
+                                .font(.system(size: 20))
+                                .italic()
+                                .foregroundColor(.black.opacity(0.5))
+                        }
+                        .padding()
+                        
+                    } // vstack
+                    .onChange(of: isTop) { newValue in
+                        withAnimation(.spring()) {
+                            proxy.scrollTo(1)
+                        }
                     }
-                    .padding()
-                    
-                } // vstack
+                } // scrollview reader
+                
             } // scrollview
             .edgesIgnoringSafeArea(.top)
         } // zstack
+        .overlay(alignment: .bottomTrailing) {
+            Button {
+                isTop.toggle()
+            } label: {
+                Image(systemName: "chevron.up")
+                    .foregroundColor(.white)
+                    .padding(25)
+                    .background(Circle().fill(Color("CustomPink").opacity(0.7)))
+                    .shadow(radius: 12)
+            }
+            .padding()
+        }
     }
 }
 
