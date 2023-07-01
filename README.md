@@ -1,7 +1,7 @@
 ![Untitled_design-6_30](https://github.com/odrzywolekmarta/Strawberry/assets/104859883/e350e8b1-4ff3-463a-be2c-21924a72761e)
 # Strawberry
 > Strawberry is a simple app created display information about these precious fruits.
-> ## Table of Contents
+## Table of Contents
 * [App Preview](#app-preview)
 * [General Information](#general-information)
 * [Technologies Used](#technologies-used)
